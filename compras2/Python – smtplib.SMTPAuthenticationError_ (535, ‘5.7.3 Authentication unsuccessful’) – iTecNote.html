@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!-- saved from url=(0106)https://itecnote.com/tecnote/python-smtplib-smtpauthenticationerror-535-5-7-3-authentication-unsuccessful/ -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+	<script src="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/f(4).txt"></script><script src="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/f(5).txt"></script><script src="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/f(6).txt" id="google_shimpl"></script><script data-ad-client="ca-pub-1962880864575776" async="" src="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/f(7).txt" data-checked-head="true"></script>
+	<title>Python – smtplib.SMTPAuthenticationError: (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/">
+<link rel="dns-prefetch" href="https://stackpath.bootstrapcdn.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<link rel="stylesheet" id="highlight-css" href="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/vs2015.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="bootstrap-css" href="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/bootstrap.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="icons-css" href="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="idream-style-css" href="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/style.css" type="text/css" media="all">
+<script type="text/javascript" src="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/jquery.min.js.descarga" id="jquery-js"></script><meta http-equiv="origin-trial" content="Az6AfRvI8mo7yiW5fLfj04W21t0ig6aMsGYpIqMTaX60H+b0DkO1uDr+7BrzMcimWzv/X7SXR8jI+uvbV0IJlwYAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A+USTya+tNvDPaxUgJooz+LaVk5hPoAxpLvSxjogX4Mk8awCTQ9iop6zJ9d5ldgU7WmHqBlnQB41LHHRFxoaBwoAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A7FovoGr67TUBYbnY+Z0IKoJbbmRmB8fCyirUGHavNDtD91CiGyHHSA2hDG9r9T3NjUKFi6egL3RbgTwhhcVDwUAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+<script type="text/javascript" src="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/highlight.min.js.descarga" id="highlight-js"></script>
+<link rel="canonical" href="https://itecnote.com/tecnote/python-smtplib-smtpauthenticationerror-535-5-7-3-authentication-unsuccessful/">
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>	<script async="" src="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/f(8).txt" crossorigin="anonymous" data-checked-head="true"></script>
+<link rel="preload" href="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/f(9).txt" as="script"><script type="text/javascript" src="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/f(9).txt"></script><link rel="preload" href="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/f(10).txt" as="script"><script type="text/javascript" src="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/f(10).txt"></script><style>.osSwitch{position:relative;display:inline-block;width:34px;height:15.3px}.osSwitch input{opacity:0;width:0;height:0}.osSlider{position:absolute;top:0;left:0;right:0;bottom:0;border-radius:34px;background-color:#93a0b5;transition:0.4s}.osSlider:before{position:absolute;content:'';height:13px;width:13px;left:2px;bottom:1px;border-radius:50%;background-color:white;transition:0.4s}input:checked+.sliderGreen{background-color:#04d289}input:checked+.sliderRed{background-color:#ff3b30}input:not(:checked)+.defaultGreen{background-color:#04d289}input:checked+.osSlider:before{transform:translateX(17px)}
+</style><style>
+    @font-face {
+      font-family: 'SegoeUI_online_security'; 
+      src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/segoe-ui.woff);
+    }
+
+    @font-face {
+      font-family: 'SegoeUI_bold_online_security'; 
+      src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/segoe-ui-bold.woff);
+    }
+</style><meta http-equiv="origin-trial" content="Az6AfRvI8mo7yiW5fLfj04W21t0ig6aMsGYpIqMTaX60H+b0DkO1uDr+7BrzMcimWzv/X7SXR8jI+uvbV0IJlwYAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A+USTya+tNvDPaxUgJooz+LaVk5hPoAxpLvSxjogX4Mk8awCTQ9iop6zJ9d5ldgU7WmHqBlnQB41LHHRFxoaBwoAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A7FovoGr67TUBYbnY+Z0IKoJbbmRmB8fCyirUGHavNDtD91CiGyHHSA2hDG9r9T3NjUKFi6egL3RbgTwhhcVDwUAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><link rel="preload" href="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/f(9).txt" as="script"><script type="text/javascript" src="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/f(9).txt"></script><link rel="preload" href="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/f(10).txt" as="script"><script type="text/javascript" src="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/f(10).txt"></script></head><iframe id="google_esf" name="google_esf" src="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/zrt_lookup.html" style="display: none;"></iframe>
+
+<body class="tecnote-template-default single single-tecnote postid-663554 no-sidebar" aria-hidden="false" style="padding: 0px 0px 120px;">
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><div id="aswift_0_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/ads.html" data-google-container-id="a!1" data-load-complete="true"></iframe></div></ins><div id="page" class="site" style="height: auto !important;">
+    <a class="skip-link screen-reader-text" href="https://itecnote.com/tecnote/python-smtplib-smtpauthenticationerror-535-5-7-3-authentication-unsuccessful/#content">Skip to content</a>
+
+    <header id="topnav" class="sticky-top">
+            <nav class="navbar navbar-expand-md navbar-light bg-light" role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-primary" aria-controls="navbar-primary" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+	            		            <a class="navbar-brand" href="https://itecnote.com/">iTecNote</a>
+	            
+				<div id="navbar-primary" class="collapse navbar-collapse"><ul id="menu-itecnote-nav" class="nav navbar-nav"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1893707" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1893707 nav-item"><a title="Python" href="https://itecnote.com/tag/python/" class="nav-link">Python</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1893708" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1893708 nav-item"><a title="Javascript" href="https://itecnote.com/tag/javascript/" class="nav-link">Javascript</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1893710" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1893710 nav-item"><a title="PHP" href="https://itecnote.com/tag/php/" class="nav-link">PHP</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1893709" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1893709 nav-item"><a title="Java" href="https://itecnote.com/tag/java/" class="nav-link">Java</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1893711" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1893711 nav-item"><a title="Android" href="https://itecnote.com/tag/android/" class="nav-link">Android</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1893713" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1893713 nav-item"><a title="iOS" href="https://itecnote.com/tag/ios/" class="nav-link">iOS</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1893714" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1893714 nav-item"><a title="jQuery" href="https://itecnote.com/tag/jquery/" class="nav-link">jQuery</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1893715" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1893715 nav-item"><a title="MySQL" href="https://itecnote.com/tag/mysql/" class="nav-link">MySQL</a></li>
+</ul></div>            </nav>
+    </header><!-- #masthead -->
+
+    <div id="content" class="site-content" style="height: auto !important;">
+    <div id="primary" class="content-area" style="height: auto !important;">
+        <main id="main" class="site-main" style="height: auto !important;">
+            <div id="main-container" class="container" style="height: auto !important;">
+                <div id="main-row" class="row" style="height: auto !important;">
+                    <div id="main-col" class="col-12" style="height: auto !important; min-height: 0px !important;">
+						
+<article id="post-663554" class="post-663554 tecnote type-tecnote status-publish hentry category-tecnote tag-python tag-smtplib" style="height: auto !important;">
+    <div class="row" style="height: auto !important;">
+        <div class="col-12 col-md-8" style="height: auto !important; min-height: 0px !important;">
+            <header class="entry-header">
+                <h1 class="entry-title text-danger">Python – smtplib.SMTPAuthenticationError: (535, ‘5.7.3 Authentication unsuccessful’)</h1>            </header><!-- .entry-header -->
+
+            <p style="font-size:1.2em"><span class="mr-2 badge badge-success">python</span><span class="mr-2 badge badge-info">smtplib</span></p>            <ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-1962880864575776" data-ad-slot="5740873733" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_1_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 280px; width: 730px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;"><iframe id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0;width:730px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="730" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/ads(1).html" data-google-container-id="a!2" data-google-query-id="CJmA1-6gpP0CFdNtwQod0HkDpQ" data-load-complete="true"></iframe></div></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <div class="entry-content">
+                        <p>I am trying to use smtplib for sending mails in python 2.7. The below code is pretty simple:</p>
+<pre><code>import smtplib
+
+def main(argv=None):
+
+    sender = 'abc@gmail.com'
+    receivers = ['xyz@gmail.com']      
+
+    message = """
+    This is a test e-mail message.
+    """
+
+    smtpObj = smtplib.SMTP('xyz@gmail.com',25)
+
+    smtpObj.login('abc', 'pwd')       
+    smtpObj.sendmail(sender, receivers, message)         
+    print "Successfully sent email"
+
+
+if __name__ == '__main__':
+    main()
+</code></pre>
+<p>Now when I execute the below code, I keep getting this exception:</p>
+<pre><code>smtplib.SMTPAuthenticationError: (535, '5.7.3 Authentication unsuccessful').
+</code></pre>
+            </div>
+            <ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-1962880864575776" data-ad-slot="5740873733" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_2_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 280px; width: 730px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;"><iframe id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0;width:730px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="730" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/ads(2).html" data-google-container-id="a!3" data-google-query-id="CKan1-6gpP0CFYlVwQodwRwDQw" data-load-complete="true"></iframe></div></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            
+<div id="comments" class="comments-area">
+    <div class="row">
+        <div class="col-12">
+	
+    <div class="mt-3 border-bottom border-success">
+        <h4 class="text-success"><i class="fa fa-check-circle text-success mr-3"></i><span>Best Solution</span></h4>
+    </div>
+
+    <div class="bg-transparent mb-3">
+<p>Actually, when I tried executing the same statements on python console, I came to know that the password was incorrect and it was due to different character encoding.</p>
+
+<p>For all other users, refrain yourself from copy paste </p>
+
+<p><img src="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/I5DFV.jpg" alt="two muppets" title="tooltip"></p>
+    </div>		
+    </div>
+        <div class="col-4"></div>
+    </div>
+</div><!-- #comments -->
+<div id="related-embeded" class="related-embeded-area"><div class="row"><div class="col-12"><div class="mt-3 border-bottom border-success"><h4 class="text-info"><i class="fa fa-check-circle text-info mr-3"></i><span>Related Solutions</span></h4></div><div class="mt-3 mb-3 border-bottom"><h5><a href="https://itecnote.com/tecnote/python-send-email-with-python-smtp-error-535-b5-7-3-authentication-unsuccessful/">Python – Send email with python smtp error 535, b’5.7.3 Authentication unsuccessful’</a></h5></div><div class="bg-transparent mb-3">
+<p>I was facing an issue with same authentication the next day. On day 1 when I wrote the code it was sending mails very well. But my company.com password had expired and I had to reset it, but after resetting also it didnt stop to give error. After 2 hrs of back and forth it was again able to send mails now. One thing I changed was I wrote the senders and receivers email ID manually instead of copy paste. rest all was same. Also as i had a function made of it, i tried refreshing function before I made the call with input "smail". Also made sure that the smail input is manually entered. Please try and suggest as to what worked for you.</p>
+
+<pre><code>
+def mailfile(smail):
+    #smail='receiver@ymail.com'
+    import smtplib
+    from email.mime.multipart import MIMEMultipart
+    from email.mime.text import MIMEText
+    from email.mime.base import MIMEBase
+    from email import encoders
+    fromaddr = "sender@company.com"
+    toaddr = smail
+    # instance of MIMEMultipart
+    msg = MIMEMultipart()
+    # storing the senders email address
+    msg['From'] = fromaddr
+    # storing the receivers email address
+    msg['To'] = toaddr
+    #storing the subject
+    msg['Subject'] = "TEST MAIL"
+    #string to store the body of the mail
+    body = "Hi DID YOU GET MAIL???"
+    #attach the body with the msg instance 
+    msg.attach(MIMEText(body, 'plain')) 
+    #open the file to be sent
+    # PATH WHERE FILE IS BEING STORED
+    filename = "filename_with_extension"
+    attachment = open("Abra/ka/dabra/file_with_extension", "rb")
+    #instance of MIMEBase and named as p
+    p = MIMEBase('application', 'octet-stream')
+    #To change the payload into encoded form 
+    p.set_payload((attachment).read())
+    #encode into base64
+    encoders.encode_base64(p)
+    p.add_header('Content-Disposition', "attachment; filename= %s" % filename)
+    #attach the instance 'p' to instance 'msg'
+    msg.attach(p)
+    #creates SMTP session
+    s = smtplib.SMTP('smtp.office365.com',587)
+    #start TLS for security
+    s.starttls()
+    s.ehlo()
+    #Authentication
+    s.login(fromaddr,'senders_passwd')
+    #Converts the Multipart msg into a string
+    text = msg.as_string()
+    #sending the mail
+    s.sendmail(fromaddr, toaddr, text)
+    #terminating the session
+    s.quit()
+</code></pre>
+    </div></div></div></div>        </div>
+        <div class="col-12 col-md-4" style="height: auto !important; min-height: 0px !important;">
+            <ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-1962880864575776" data-ad-slot="5946106761" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_3_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 280px; width: 350px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;"><iframe id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;border:0;width:350px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="350" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/ads(3).html" data-google-container-id="a!4" data-google-query-id="CIvX1-6gpP0CFUwQoQodyzIBDQ" data-load-complete="true"></iframe></div></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <div class="mt-3 ml-4 border-bottom border-success"><h6><span>Related Question</span></h6></div><ul class="list-group list-group-flush"></ul>            <ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-1962880864575776" data-ad-slot="1527980765" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_4_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 280px; width: 350px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;"><iframe id="aswift_4" name="aswift_4" style="left:0;position:absolute;top:0;border:0;width:350px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="350" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/ads(4).html" data-google-container-id="a!5" data-google-query-id="CNjT2O6gpP0CFc1mwQodWEQD3g" data-load-complete="true"></iframe></div></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+    <footer class="entry-footer">
+		    </footer><!-- .entry-footer -->
+</article><!-- #post-663554 -->
+
+                    </div><!-- #main-col -->
+                </div><!-- #main-row -->
+            </div><!-- #main-container -->
+        </main><!-- #main -->
+    </div><!-- #primary -->
+
+
+
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer">
+		<div class="site-info">
+
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type="text/javascript" src="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/bootstrap.min.js.descarga" id="bootstrap4-js"></script>
+<script type="text/javascript" src="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/idream.js.descarga" id="idream-common-js"></script>
+
+
+
+
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" data-side-rail-status="idle" style="display: none !important;" data-ad-status="filled"><div id="aswift_6_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 500px; width: 180px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_6" name="aswift_6" style="width:180px !IMPORTANT;height:500px !IMPORTANT" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="180" height="500" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/zrt_lookup(1).html" data-google-container-id="a!7" data-google-query-id="CM621u6gpP0CFROCywEd2GgGDg" data-load-complete="true"></iframe></div><span class="left-side-rail-edge" style="background: rgb(250, 250, 250) !important; position: absolute !important; left: 0px !important; top: 500px !important; width: 180px !important; height: 5px !important; box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 5px -1px, rgba(0, 0, 0, 0.1) 0px -1px 2px -1px !important;"></span><span class="left-side-rail-dismiss-btn" style="background: rgb(250, 250, 250) !important; position: absolute !important; left: 65px !important; right: 65px !important; top: 505px !important; box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 5px -1px, rgba(0, 0, 0, 0.1) 0px -1px 2px -1px !important;"><svg style="position: absolute !important; top: 0px !important; display: block !important; width: 50px !important; height: 30px !important; margin-top: -5px !important; transform: none !important; pointer-events: initial !important;"><defs><filter id="left-side-rail-drop-shadow" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><fecomponenttransfer in="SourceAlpha" result="TransferredAlpha"><fefuncr type="discrete" tableValues="0.5"></fefuncr><fefuncg type="discrete" tableValues="0.5"></fefuncg><fefuncb type="discrete" tableValues="0.5"></fefuncb></fecomponenttransfer><fegaussianblur in="TransferredAlpha" stdDeviation="2"></fegaussianblur><feoffset dx="0" dy="0" result="offsetblur"></feoffset><femerge><femergenode></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter></defs><path d="M5,5 L5,17 A8,8 0 0,0 13,25 L37,25 A8,8 0 0,0 45,17 L45,5 Z" stroke="#FAFAFA" stroke-width="1" fill="#FAFAFA" style="filter: url(&quot;#left-side-rail-drop-shadow&quot;);"></path><rect x="0" y="0" width="50" height="5" style="fill: rgb(250, 250, 250);"></rect><g stroke="#616161" stroke-width="2px" stroke-linecap="square"><line x1="18" y1="18" x2="25" y2="12"></line><line x1="25" y1="12" x2="32" y2="18"></line></g></svg></span></ins><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" data-side-rail-status="idle" style="display: none !important; margin: 0px !important; padding: 0px !important; position: fixed !important; right: 9px !important; top: 279.667px !important; z-index: 1 !important; opacity: 0 !important; transition: all 500ms ease-in 0s !important;" data-ad-status="filled"><div id="aswift_7_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 500px; width: 180px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_7" name="aswift_7" style="width:180px !IMPORTANT;height:500px !IMPORTANT" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="180" height="500" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/zrt_lookup(2).html" data-google-container-id="a!8" data-google-query-id="CM-21u6gpP0CFROCywEd2GgGDg" data-load-complete="true"></iframe></div><span class="right-side-rail-edge" style="background: rgb(250, 250, 250) !important; position: absolute !important; left: 0px !important; top: 500px !important; width: 180px !important; height: 5px !important; box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 5px -1px, rgba(0, 0, 0, 0.1) 0px -1px 2px -1px !important;"></span><span class="right-side-rail-dismiss-btn" style="background: rgb(250, 250, 250) !important; position: absolute !important; left: 65px !important; right: 65px !important; top: 505px !important; box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 5px -1px, rgba(0, 0, 0, 0.1) 0px -1px 2px -1px !important;"><svg style="position: absolute !important; top: 0px !important; display: block !important; width: 50px !important; height: 30px !important; margin-top: -5px !important; transform: none !important; pointer-events: initial !important;"><defs><filter id="right-side-rail-drop-shadow" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><fecomponenttransfer in="SourceAlpha" result="TransferredAlpha"><fefuncr type="discrete" tableValues="0.5"></fefuncr><fefuncg type="discrete" tableValues="0.5"></fefuncg><fefuncb type="discrete" tableValues="0.5"></fefuncb></fecomponenttransfer><fegaussianblur in="TransferredAlpha" stdDeviation="2"></fegaussianblur><feoffset dx="0" dy="0" result="offsetblur"></feoffset><femerge><femergenode></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter></defs><path d="M5,5 L5,17 A8,8 0 0,0 13,25 L37,25 A8,8 0 0,0 45,17 L45,5 Z" stroke="#FAFAFA" stroke-width="1" fill="#FAFAFA" style="filter: url(&quot;#right-side-rail-drop-shadow&quot;);"></path><rect x="0" y="0" width="50" height="5" style="fill: rgb(250, 250, 250);"></rect><g stroke="#616161" stroke-width="2px" stroke-linecap="square"><line x1="18" y1="18" x2="25" y2="12"></line><line x1="25" y1="12" x2="32" y2="18"></line></g></svg></span></ins><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" data-anchor-status="displayed" style="display: block; width: 100% !important; height: 95px !important; bottom: 0px; clear: none !important; float: none !important; left: 0px; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1; overflow: visible !important; padding: 0px !important; position: fixed; right: auto !important; top: auto !important; vertical-align: baseline !important; visibility: visible !important; z-index: 2147483647; background: rgb(250, 250, 250) !important;" data-ad-status="filled" data-anchor-shown="true"><div class="grippy-host"></div><div id="aswift_8_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none !important; height: 90px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><iframe id="aswift_8" name="aswift_8" style="width: 728px !important; height: 90px !important; display: block; margin: 0px auto;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/zrt_lookup(3).html" data-google-container-id="a!9" data-google-query-id="CNC21u6gpP0CFROCywEd2GgGDg" data-load-complete="true"></iframe></div></ins><iframe src="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/aframe.html" width="0" height="0" style="display: none;"></iframe></body><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important; width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; clear: none !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; position: fixed !important; vertical-align: baseline !important; visibility: visible !important; z-index: 2147483647 !important; background: transparent !important;" aria-hidden="true" data-ad-status="filled" data-vignette-loaded="true"><div id="aswift_5_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none !important; height: 100vh !important; width: 100vw !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><iframe id="aswift_5" name="aswift_5" style="width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; position: absolute !important; clear: none !important; display: inline !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; vertical-align: baseline !important; visibility: visible !important; z-index: auto !important;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="" height="" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./Python – smtplib.SMTPAuthenticationError_ (535, ‘5.7.3 Authentication unsuccessful’) – iTecNote_files/zrt_lookup(4).html" data-google-container-id="a!6" data-google-query-id="CM221u6gpP0CFROCywEd2GgGDg" data-load-complete="true"></iframe></div></ins></html>

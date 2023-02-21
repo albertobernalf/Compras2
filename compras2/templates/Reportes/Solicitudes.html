@@ -1,0 +1,276 @@
+{% extends "Reportes/cabeza.html" %}
+{% load static %}
+
+{% block content %}
+<!-- desde AQUI SI SEÑORES                      -->
+<script>
+window.onload = function(){
+  var fecha = new Date(); //Fecha actual
+  var mes = fecha.getMonth()+1; //obteniendo mes
+  var dia = fecha.getDate(); //obteniendo dia
+  var ano = fecha.getFullYear(); //obteniendo año
+  var hora = fecha.getHours();
+  var minutos = fecha.getMinutes();
+  var segs = fecha.getSeconds();
+
+  horario = hora+":"+minutos+":"+ segs;
+  console.log(horario);
+
+  if (hora < 10)
+     hora = '0' + hora;  //agrega cero si el hora de 10
+  if (minutos < 10)
+        minutos = '0' + minutos;
+  if (segs < 10)
+         segs = '0' + segs;
+
+      horario = hora+":"+minutos+":"+ segs;
+  console.log(horario);
+
+  if(dia<10)
+    dia='0'+dia; //agrega cero si el menor de 10
+  if(mes<10)
+    mes='0'+mes //agrega cero si el menor de 10
+  document.getElementById('fecha').value=ano+"-"+mes+"-"+dia + " " +hora+":"+minutos+":"+ segs;
+
+}
+
+</script>
+
+
+<input type="hidden" class="form-control" id="username" name="username" value={{ Username }}>
+<input type="hidden" class="form-control" id="sedeSeleccionada" name="sedeSeleccionada" value={{ SedeSeleccionada }}>
+<input type="hidden" class="form-control" id="nombreUsuario" name="nombreUsuario" value={{NombreUsuario}}>
+<input type="hidden" class="form-control" id="nombreSede" name="nombreSede" value={{ NombreSede }}>
+<br>
+<br>
+
+
+<div class="row " style=" width:1600px;  height: 10px;">
+
+    <div class="col-lg-3"></div>
+
+    <div class="col-lg-6">
+
+        <div class="mx-auto" style="height: 45px; background-color:#7B67FA ">
+            <center>
+                <figure class="figure">
+
+                    <figcaption class="figure-caption text-center">
+
+                        <H1>
+                            <span style="font-style:font-size:5px">
+                                <b>
+                                    <FONT COLOR="white">SOLICITUD DE PEDIDOS PARA COMPRA O SERVICIO </FONT>
+                                </b>
+                            </span>
+
+                        </H1>
+
+                    </figcaption>
+                </figure>
+            </center>
+
+        </div>
+    </div>
+
+    <div class="col-lg-3"></div>
+
+</div> <!-- Final Titulos -->
+
+<div class="row" style=" width:1600px; height: 280px; ">
+    <div class="col-lg-3"></div>
+
+    <div class="col-lg-6">
+        <!--   <form class="form-inline" action="/solicitudesCreacion/" method="POST" id="formSolicitudes">  -->
+
+        <div class="row" style=" width:670px; height: 40px; ">
+            <div class="  col-lg-3 "><label for="fecha" class="col-form-label">Fecha Solicitud:</label></div>
+            <div class="  col-lg-1 ">
+
+                <input type="datetime-local" id="fecha" name="fecha" readonly> </input>
+
+            </div>
+            <div class="  col-lg-4 "></div>
+            <div class="  col-lg-3 "><label for="fecha" class="col-form-label">Solicitud No:</label></div>
+
+            <div class="col-lg-1 ">
+
+                <input type="text" id="id" name="id" value="" size="14" readonly></input>
+            </div>
+
+        </div> <!-- Fin Primera Fila -->
+
+        <div class="row" style=" width:670px;height: 40px;  ">
+            <div class="  col-lg-3 "><label for="coord" class="col-form-label">Coordinador:</label></div>
+            <div class=" col-lg-9 ">
+                <input type="text" id="coord" name="coord" size="75" value="{{NombreUsuario}}" readonly></input>
+            </div>
+
+        </div> <!-- Fin Segunda Fila -->
+
+        <div class="row" style=" width:670px; height: 40px;  ">
+
+            <div class="col-lg-3 "><label for="sede" class="col-form-label">Sede:</label></div>
+            <div class="col-lg-3 ">
+
+                <input type="text" id="sede" name="sede" size="30" value="{{NombreSede}}" readonly></input>
+            </div>
+
+            <div class="  col-lg-2 "></div>
+
+            <div class="  col-lg-1 "><label for="areat" class="col-form-label">Area:</label></div>
+            <div class="  col-lg-3 ">
+                <select class="form-control" id="areat" name="areat" style="width:262px;" size="1">
+                    {% for areas in Areas %}
+                    <option value="{{areas.id}}"> {{areas.area}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div> <!-- Fin Tercera Fila -->
+
+        <br>
+        <!-- Aqui los items para Adicionar a la tabla-->
+
+        <div class="row" style=" width:670px; height: 40px; ">
+
+            <div class="  col-lg-2 "><label for="descripcion" class="col-form-label">Descripcion:</label></div>
+            <div class="  col-lg-2 ">
+                <select class="form-control" id="descripcion" name="descripcion" style=" width:110px; " size="1">
+                    {% for descripcionescompra in Descripcionescompra %}
+                    <option value="{{descripcionescompra.id}}"> {{descripcionescompra.nombre}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+
+            <div class="  col-lg-1"><label for="tipo" class="col-form-label">Tipo:</label></div>
+
+            <div class="  col-lg-2 ">
+                <select class="form-control" id="tipo" name="tipo" style=" width:110px; " size="1">
+                    {% for tiposCompra in TiposCompra %}
+                    <option value="{{tiposCompra.id}}"> {{tiposCompra.nombre}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+
+            <div class="  col-lg-2 "><label for="producto" class="col-form-label"> &nbsp; Producto:</label></div>
+
+
+            <div class="  col-lg-2 ">
+                <select class="form-control" id="producto" name="producto" style=" width:262px; " size="1">
+                    {% for articulos in Articulos %}
+                    <option value="{{articulos.codreg_articulo}}"> {{articulos.articulo}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+        </div> <!-- Fin Cuarta Fila -->
+
+        <div class="row" style=" width:670px; height: 40px;  ">
+            <div class="  col-lg-2 "><label for="presentacion" class="col-form-label">Presentacion:</label></div>
+
+            <div class="  col-lg-1 ">
+                <select class="form-control" id="presentacion" name="presentacion" style=" width:80px; " size="1">
+                    {% for presentacion in Presentacion %}
+                    <option value="{{presentacion.id}}"> {{presentacion.nombre}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="  col-lg-1 "></div>
+
+
+            <div class="  col-lg-3 ">
+                <label for="cantidad" class="col-form-label">Cantidad:</label>
+                <input type="text" id="cantidad" name="cantidad" value="0" size="2"> </input>
+
+            </div>
+
+
+            <div class="  col-lg-4 ">
+                <label for="justificacion" class="col-form-label"> Justif:</label>
+                <input type="text" id="justificacion" name="justificacion" size="10"> </input>
+
+            </div>
+
+
+            <div class=" col-lg-1 ">
+                <input type="button" class="button" id="btnAdicion" name="btnAdicion" value="Adicionar"
+                       alt="Submit"> </input>
+            </div>
+        </div> <!-- Fin Quinta Fila -->
+
+    </div> <!-- Fin Segundo Empotrada fila  -->
+
+    <!-- hasta aqui Cabecera -->
+    <!-- La tabla-->
+
+
+    <div class="row" style=" width:670px;  height: 40px; ">
+        <div class="col-xl-7"></div>
+        <div class="col-xl-5">
+            <div class="container">
+
+                <div id="noTomar1" class="scrollable" align="center">
+                    <center>
+                        <table cellspacing="0" width="100%" class="table  table-fixed " id="tablaSolicitud">
+
+                            <thead>
+                            <tr>
+                                <!-- <th data-visible="false"></th>  -->
+                                <th style="width:20%">Descripcion</th>
+                                <th style="width:20%">Tipo</th>
+                                <th style="width:20%">Producto</th>
+                                <th style="width:20%">Presentacion</th>
+                                <th style="width:10%">Cantidad</th>
+                                <th style="width:20%">Justificacion</th>
+                                <th class="col-xs-1"> BORRAR</th>
+                                <th data-visible="false"></th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                            <tfoot>
+                            </tfoot>
+                        </table>
+                    </center>
+                </div>
+            </div> <!-- Container -->
+
+        <div> <!-- Fin col Tabla-->
+
+
+    </div> <!-- Fin Row de tabla -->
+
+
+        <div class="row" style=" width:670px;  height: 40px; ">
+            <div class="col-lg-4 "></div>
+
+            <!--  <div class="col-lg-1 bg-info text-white"> -->
+            <div class="col-lg-2 ">
+                <br>
+                <input type="button" class="button1" id="btnSolCrea" name="btnSolCrea" value="Enviar Solicitud"
+                       onclick="guardarSolicitud()"> </input>
+
+            </div>
+
+            <div class="col-lg-6 ">
+                <span id="mensajes" name="mensajes" style="color: blue"> </span>
+            </div>
+        </div>   <!-- Fin de oytra row -->
+        <!--   </form>  -->
+    </div>  <!--  Debe ser fin de la columna de la mitad  -->
+    <div class="col-lg-3"></div>
+
+
+</div> <!-- Debe ser el fin de ror principal ?? -->
+
+
+
+
+{% endblock %}
+
+

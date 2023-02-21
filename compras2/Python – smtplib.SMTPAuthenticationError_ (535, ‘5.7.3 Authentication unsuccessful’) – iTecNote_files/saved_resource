@@ -1,0 +1,49 @@
+
+var ftGUID_4201884="5204F82336BAFF";
+var ftConfID_4201884="0";
+var ftParams_4201884="ftOBA=1&ft_agentEnv=0&ft_referrer=https%3A%2F%2Fgoogleads.g.doubleclick.net%2Fpagead%2Fhtml%2Fr20230215%2Fr20110914%2Fzrt_lookup.html%3Ffsb%3D1%23RS-3-%26adk%3D1812271801%26client%3Dca-pub-1962880864575776%26fa%3D1%26ifi%3D9%26uci%3Da!9%26btvi%3D4%26xpc%3DUBfbSUDilj%26p%3Dhttps%253A%2F%2Fitecnote.com&us_privacy=${US_PRIVACY}&cachebuster=70042.51224219038&ft_dv=%5B%25ft_dv%25%5D";
+var ftKeyword_4201884="";
+var ftCustom_4201884="";
+var ftSection_4201884="";
+var ftSegment_4201884="aiia,afr5,aixc,ah5d_hi,w2c,akhq";
+var ftSegmentList_4201884=[{s:'aiia'},{s:'afr5'},{s:'aixc'},{m:'c20043_quantcast',s:'ah5d_hi'},{s:'w2c'},{s:'akhq'}];
+var ftRuleMatch_4201884="0";
+var ftTimestamp_4201884="1676901813";
+var ftGeoC2_4201884="co";
+var ftGeoState_4201884="dc";
+var ftGeoCity_4201884="bogota";
+var ftISP_4201884="etb - colombia";
+var ftSpeed_4201884="broadband";
+var ftConnType_4201884="wifi";
+var ftDMA_4201884="-1";
+var ftLong_4201884="-74.16";
+var ftLat_4201884="4.63";
+var ftPostal_4201884="110851";
+var ftTimeZone_4201884="-500";
+var ftMobileCarrier_4201884="";
+var ftImp4201884 = {};
+ftImp4201884.privacy = "x";
+ftImp4201884.guidAge = "325";
+ftImp4201884.impID = "D589B1CA-F245-F474-81D3-31044731DEBE";
+ftImp4201884.duid = "FT:5204F82336BAFF";
+
+ftImp4201884.ft_tpplid = "";
+ftImp4201884.ft_c = {};
+ftImp4201884.gdpr = "";
+ftImp4201884.gdpr_consent = "";
+ftImp4201884.gdpr_pd = "";
+ftImp4201884.oob_consent = "";
+ftImp4201884.gdprStoredConsent = "";
+ftImp4201884.us_privacy = "!!US_PRIVACY!";
+
+ftImp4201884.jsAppend = "1";
+(function(){
+    var tag = document.getElementById('ft_servedby_4201884') || (function(s){
+    	return s[s.length-1];
+    }(document.getElementsByTagName('script'))),
+           js = document.createElement('script');
+    js.src =
+"https://cdn.flashtalking.com/xre/420/4201884/3641478/js/j-4201884-3641478.js";
+    js.id = "ftscript_m4201884";
+    tag.parentNode.insertBefore(js, tag);
+}());

@@ -1,0 +1,121 @@
+{% extends "Reportes/pantallaGrupos.html" %}
+{% load static %}
+
+
+{% block content %}
+
+<input type="hidden" id="username" name="username" value = "{{Username}}">
+<input type="hidden" id="sedeSeleccionada" name="sedeSeleccionada" value = "{{SedeSeleccionada}}">
+<input type="hidden" id="numreporte" name="numreporte" value = "{{numreporte}}">
+<input type="hidden" id="grupo" name="grupo" value = "{{Grupo}}">
+<input type="hidden" id="subGrupo" name="subGrupo" value = "{{SubGrupo}}">
+
+
+<!--Inicia TITULOS       -->
+<div class="row" style=" height: 90px;">
+
+
+    <div class="col-xl-2"> </div>
+
+
+    <div class="col-xl-6">
+        <div class="mx-auto" style="width: 1400px; background-color:#808B96  " >
+            <center>
+            <figure class="figure">
+                <figcaption class="figure-caption text-center">
+                    <H1>
+                        {% for nombreGrupoSeleccionado in NombreGrupoSeleccionado %}
+                        <p style="font-style:font-size:40px"><b><FONT COLOR="white">REPORTES {{nombreGrupoSeleccionado.nombreGrupo}} </FONT>     </b></p>
+                          {% endfor %}
+
+                    </H1>
+
+                </figcaption>
+            </figure>
+            </center>
+        </div>
+    </div>
+
+         <div class="col-xl-2">
+
+    </div>
+
+
+      <div class="col-xl-2">
+
+        <figure class="figure">
+
+            <img src="{% static '/img/inicio.jpg'' %}" class="figure-img img-fluid rounded" style="width:150px;height:50px;" alt="...">
+            <figcaption class="figure-caption text-right">
+                <a href="/emergenteGrupos/{{Username}}, {{SedeSeleccionada}}, {{Grupo}} ">  <p style="font-style:font-size:40px"><b><FONT COLOR="black">Retorno</FONT>     </b></p>       </a>
+            </figcaption>
+        </figure>
+
+    </div>
+
+</div>
+
+
+
+<!--Fin TITULOS       -->
+
+<!--Inicia PantallaSubGrupos       -->
+
+
+<!-- <div class="row"  style=" height: 30px;">  -->
+<div class="row" style=" height: 500px;">
+    <div class="col-xl-2"></div>
+
+
+      {% for subGrupos in SubGrupos %}
+
+     {% if subGrupos.nombreSubGrupo == "LABORATORIO"%}
+              <div class="col-xl-2"></div>
+
+         {% endif %}
+
+         {% if subGrupos.nombreSubGrupo ==  "ADMISIONES"  %}
+              <div class="col-xl-2"></div>
+
+
+         {% endif %}
+
+    {% if subGrupos.nombreSubGrupo ==  "ESTADISTICAS"  %}
+              <div class="col-xl-2"></div>
+
+
+         {% endif %}
+
+
+      <div class="col-xl-2" style="width:180px;height:160px;">
+
+        <figure class="figure">
+
+            <img src="{% static subGrupos.logo %}" class="figure-img img-fluid rounded"
+                 style="width:300px;height:150px;"
+                 alt="...">
+            <figcaption class="figure-caption text-center">
+                <a href="/combo/{{Username}}, {{SedeSeleccionada}}, {{Grupo}}, {{subGrupos.id}}  ">
+                    <button type="button" class="btn btn-primary"  style="background-color:#244FA3"><H6>{{subGrupos.nombreSubGrupo}}</H6></button>
+                     </a>
+            </figcaption>
+        </figure>
+
+
+        </div>
+
+
+    {% endfor %}
+
+    <div class="col-xl-2"></div>
+
+
+ </div>
+<!-- </div>  -->
+<br>
+<br>
+<br>
+
+
+<!--Fin PantallaSubGrupos       -->
+{% endblock %}

@@ -1,0 +1,35 @@
+Tareas:
+
+1-- crear rutina correo, por que no me escribe el print del correo ?
+2-- al  deletes no me envia los que no he borrado soino todos.Ojo creo que todavia acumulas la tbla de las solicitud anterior
+3-- alinear mas la forma
+4. rutina leer archivo en windows cargar
+5. Problemas con el cargue de datos ?: usuarios,, sedescompra  si cargaron : areas, proveedores.. Sigue el problema no carga todos los usuarios porcua ??
+6. se pierde area despues de que una solictud no existe
+6.5 Falta el responsable del almacen en la notif de compras
+7. Como hacer lo del default = 1 para usuario=1 'NO APLICA' ??
+
+7.5 Que pasa con desarrollo y apache activos no s epuede depurar el software
+7.6 Se aprueba y valida por item o por solicitud ? USUARIO, USERNAME
+
+8. hacer pantalla Orden de Compra
+9. Conseguir clave de cmreporteador usuario desarrollo
+10. Como ingresar a outlook , para smtp activarlo
+
+Ojo esto es para Apache:
+
+https://docs.bluehosting.cl/tutoriales/servidores/como-instalar%2C-configurar-y-usar-apache-en-windows.html
+php - ¿Cómo podría tener dos servidores apache y balancear las conexiones entre ellos para evitar cortes en Windows_ - Stack Overflow en español
+
+Para seleccionar archivos desde python ...
+
+https://recursospython.com/guias-y-manuales/examinar-archivo-o-carpeta-en-tk-tkinter/
+
+
+echo "# Compras2" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/albertobernalf/Compras2.git
+git push -u origin main

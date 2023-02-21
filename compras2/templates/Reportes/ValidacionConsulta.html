@@ -1,0 +1,82 @@
+{% extends "Reportes/cabeza.html" %}
+{% load static %}
+
+{% block content %}
+
+<input type="hidden" class="form-control" id="username" name="username" value={{ Username }}>
+<input type="hidden" class="form-control" id="sedeSeleccionada" name="sedeSeleccionada" value={{ SedeSeleccionada }}>
+<input type="hidden" class="form-control" id="nombreUsuario" name="nombreUsuario" value={{NombreUsuario}}>
+<input type="hidden" class="form-control" id="nombreSede" name="nombreSede" value={{ NombreSede }}>
+
+
+<div class="row " style=" width:1600px;  height: 50px;">
+
+    <div class="col-lg-3"></div>
+
+    <div class="col-lg-6" style="height: 50px; ">
+        <div style="width:770px; height: 50px; background-color:#7B67FA ">
+
+            <center>
+                <H2>
+                            <span style="font-style:font-size:4px">
+                                <b>
+                                    <FONT COLOR="white">VALIDACION SOLICITUD  </FONT>
+                                </b>
+                            </span>
+
+                </H2>
+            </center>
+        </div>
+    </div>
+
+    <div class="col-lg-3"></div>
+
+
+</div>
+
+<div class="row " style=" width:1250px;  height: 10px;"></div>
+
+<div class="row " style=" width:1250px;  height: 20px;">
+    <div class="col-lg-5"></div>
+    <div class="col-lg-6">
+        <form class="form-inline" action="ValidacionBusca" method="POST" id="formValidacionBusca">
+
+            <div class="form-row" style=" width:1250px;  height: 100px;">
+                <div class="form-group col-md-3 ">
+                    Suministre No solicitud:
+                </div>
+
+                <div class="form-group col-md-2 ">
+                    <label for="solicitudId" class="col-form-label"></label>
+                    <input type="text" id="solicitudId" name="solicitudId" style="width:90px;  height: 30px;"></input>
+                </div>
+                <div class="form-group col-md-2"></div>
+                <div class="form-group col-md-3">
+
+                    <input type="submit" id="btnEnviarSol" name="btnEnviarSol" value="Enviar"> </input>
+                    <input type="hidden" class="form-control" id="username" name="username" value={{ Username }}>
+                    <input type="hidden" class="form-control" id="sedeSeleccionada" name="sedeSeleccionada" value={{
+                           SedeSeleccionada }}>
+                    <input type="hidden" class="form-control" id="nombreUsuario" name="nombreUsuario"
+                           value={{NombreUsuario}}>
+                    <input type="hidden" class="form-control" id="nombreSede" name="nombreSede" value={{ NombreSede }}>
+                </div>
+              <!--  <div class="form-group col-md-2 "><span style="color: #ed1b24" id="mensajes1"   name="mensajes1">{{Error}} </span></div> -->
+            </div>
+        </form>
+    </div>
+    <div class="col-lg-1"></div>
+</div>
+<div class="row " style=" width:1600px;  height: 20px;"> </div>
+<div class="row " style=" width:1600px;  height: 20px;"> </div>
+<div class="row " style=" width:1600px;  height: 20px;"> </div>
+<div class="row " style=" width:1600px;  height: 20px;">
+     <div class="form-group col-md-5"> </div>
+     <div class="form-group col-md-7 "><span style="color: #ed1b24" id="mensajes1"   name="mensajes1">{{Error}} </span>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block SUBGRUPO %}
+{% endblock %}

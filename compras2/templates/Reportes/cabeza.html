@@ -1,0 +1,201 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src={% static 'main.js' %} defer> </script>
+    <title>
+        {% block title %} {% endblock %}
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Custom css -->
+    <link rel="stylesheet" type="text/css" href={% static 'css/login.css' %} >
+    <link rel="stylesheet" type="text/css" href={% static 'nav_sidebar.css' %} >
+    <link rel="stylesheet" type="text/css" href={% static 'css/base.css' %} >
+    <link rel="stylesheet" type="text/css" href={% static 'css/responsive.css' %} >
+
+    <!-- Custom css -->
+
+     <link rel="stylesheet" type="text/css" href={% static 'css/navegacionSolicitud.css' %} >
+
+    <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+
+    <style type="text/css">
+        thead tr th {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background-color: #ffffff;
+        }
+
+        .table-responsive {
+            height:200px;
+            overflow:scroll;
+        }
+
+        .button {
+             border: none;
+             width: 580%;
+             height: 90%;
+             padding: 15px 32px;
+             display: inline-block;
+
+        }
+
+        .button1 {
+             background-color: #f44336;
+             color: white;
+             border: none;
+             width: 300%;
+             height: 50%;
+             display: inline-block;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- desde AQUI SI SEÑORES                      -->
+
+<input type="hidden" class="form-control" id="username" name="username" value={{ Username }}>
+<input type="hidden" class="form-control" id="sedeSeleccionada" name="sedeSeleccionada" value={{ SedeSeleccionada }}>
+<input type="text" class="form-control" id="nombreUsuario" name="nombreUsuario" value={{NombreUsuario}}>
+<input type="hidden" class="form-control" id="nombreSede" name="nombreSede" value={{ NombreSede }}>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="#">Mision</a>
+                <a class="nav-link" href="/Solicitudes/{{Username}}, {{SedeSeleccionada}}, {{NombreUsuario}} , {{NombreSede}}">Solicitudes</a>
+                <a class="nav-link" href="/ValidacionConsulta/{{Username}}, {{SedeSeleccionada}}, {{NombreUsuario}} , {{NombreSede}}">Validacion</a>
+                <a class="nav-link" href="/AlmacenConsulta/{{Username}}, {{SedeSeleccionada}}, {{NombreUsuario}} , {{NombreSede}}">Notif.Almacen</a>
+                <a class="nav-link" href="/ComprasConsulta/{{Username}}, {{SedeSeleccionada}}, {{NombreUsuario}} , {{NombreSede}}">Notif.Compras</a>
+                <a class="nav-link" href="/ordenesDeCompra/{{Username}}, {{SedeSeleccionada}}, {{NombreUsuario}} , {{NombreSede}}">Ordenes de Compra</a>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                    </div>
+                </li>
+
+
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                <a class="nav-link" href="/salir">Salir</a>
+
+            </div>
+        </div>
+    </div>
+
+</nav>
+
+
+
+
+<div class="row" style=" width:1600px; height: 90px;">
+    <div class="col-lg-1">     </div>
+
+    <div class="col-lg-10">
+      <!--   <div class="mx-auto" style="width: 1300px; height: 60px; background-color:#352F5C " >  -->
+        <div class="mx-auto" style="height: 70px;  background-color:#352F5C " >
+            <center>
+            <figure class="figure">
+
+                <figcaption class="figure-caption text-center">
+
+                    <H1>
+                        <p style="font-style:font-size:40px"><b><FONT COLOR="white">CLINICA MEDICAL - COMPRAS </FONT>     </b></p>
+
+
+                    </H1>
+
+                </figcaption>
+            </figure>
+
+                 <figure class="figure">
+            <img src="{% static '/img/Doctor1.jpg' %}" class="figure-img img-fluid rounded"
+                 style="height:30px;"
+                 alt="...">
+            <figcaption class="figure-caption text-right">Actitud de Servicio
+            </figcaption>
+        </figure>
+
+
+            </center>
+
+        </div>
+    </div>
+
+
+
+    <div class="col-lgl-1">
+
+
+
+    </div>
+
+
+
+
+</div>
+
+
+
+<!-- HASTA AQUI                                              -->
+
+<div class="row" style="width:1600px; height: 130px;">
+{% block content %}
+
+
+{% endblock %}
+</div>
+
+<div class="row" style="  height: 90px;">
+
+    <div class="col-lg-10"></div>
+
+    <div class="col-lg-2">
+
+        <figure class="figure">
+            <img src="{% static '/img/MEDICALFINAL.JPG' %}" class="figure-img img-fluid rounded"
+                 style="height:30px;"
+                 alt="...">
+            <figcaption class="figure-caption text-right">CLINICA MEDICAL
+            </figcaption>
+        </figure>
+
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+<link rel="stylesheet" type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.43/css/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.43/css/bootstrap-datetimepicker-standalone.css">
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.43/js/bootstrap-datetimepicker.min.js"></script>
+
+</body>
+</html>

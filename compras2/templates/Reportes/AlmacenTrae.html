@@ -1,0 +1,203 @@
+{% extends "Reportes/cabeza.html" %}
+{% load static %}
+
+{% block content %}
+<script>
+    window.onload = function(){
+
+        var tabla = document.getElementById("tablaAlmacenDetalle");
+        var variable = "";
+        var valor = 0;
+
+         // Ahora aqui colocar El valor al como seleccionado
+
+         for (var i = 0, row; row = tabla.rows[i]; i++) {
+           if (i>0)
+           {
+            for (var j = 0, col; col = row.cells[j]; j++) {
+                if (j==12)
+                    {
+                      // Aqui jquery pone valor a combo
+                      variable = i;
+                      valor = col.innerText;
+                     $("#"+variable).val(valor)
+                  //   alert("Entre columna 12 con valor = " +  valor);
+
+                 // $("#slcAutos").val(col.innerText);
+                    }
+            }
+           }
+         }
+
+         // Fina valor a combo
+
+
+    }
+</script>
+
+<input type="hidden" class="form-control" id="username" name="username" value={{ Username }}>
+<input type="hidden" class="form-control" id="sedeSeleccionada" name="sedeSeleccionada" value={{ SedeSeleccionada }}>
+<input type="hidden" class="form-control" id="nombreUsuario" name="nombreUsuario" value={{NombreUsuario}}>
+<input type="hidden" class="form-control" id="nombreSede" name="nombreSede" value={{ NombreSede }}>
+<input type="hidden" class="form-control" id="solicitudId" name="solicitudId" value={{ SolicitudId }}>
+
+<div class="row " style=" width:1600px;  height: 60px; ">
+    <div class="col-lg-3 " style="height: 50px; "></div>
+    <div class="col-lg-6" style="height: 50px; ">
+
+        <div style="width:800px; height: 50px; background-color:#7B67FA ">
+            <center>
+                <H2>
+                            <span style="font-style:font-size:4px">
+                                <b>
+                                    <FONT COLOR="white"> NOTIFICACION ALMACEN   </FONT>
+                                </b>
+                            </span>
+
+                </H2>
+            </center>
+        </div>
+    </div>
+
+    <div class="col-lg-3" style="height: 50px; "></div>
+
+</div>
+
+<div class="row " style=" width:1600px;  height: 50px;">
+    <div class="col-lg-3" style="height: 50px;  "></div>
+    <div class="col-lg-6" style="height: 50px;  color:hsl(290,100%,50%); ">
+
+            <div id="noTomar">
+
+                    <table cellspacing="0"   id="tablaAlmacen">
+                        <thead>
+                      <!--   <tr>  -->
+                            <th style="width:6%">Fecha Solicitud</th>
+                            <th style="width:6%">Solicitud No</th>
+                            <th style="width:6%">Coordinador</th>
+                            <th style="width:6%">Sede</th>
+                            <th style="width:6%">Area</th>
+                            <th style="width:6%">Estado</th>
+                      <!--   </tr> -->
+                        </thead>
+                        <tbody>
+                        {% for solicitud in Solicitud %}
+                        <td> {{solicitud.fecha}}</td>
+                        <td> {{solicitud.id}}</td>
+                        <td> {{solicitud.nom_usuario}}</td>
+                        <td> {{solicitud.nom_sede}}</td>
+                        <td> {{solicitud.nom_area}}</td>
+                        <td> {{solicitud.estadoReg}}</td>
+
+                        {% endfor %}
+                        </tbody>
+                        <tfoot>
+                        </tfoot>
+                    </table>
+
+            </div>
+
+
+    </div>  <!-- fin columna -->
+
+    <div class="col-lg-3" style="height: 50px;"></div>
+
+</div> <!-- fin fila -->
+<div class="row " style=" width:1600px;  height: 40px; "></div>
+
+
+        <!--  Aqui viene la grilla detalle  -->
+
+        <div class="row " style=" width:1600px;  height: 250px;">
+           <div class="col-lg-3" style="height: 50px; "></div>
+            <div class="col-lg-6">
+
+                    <div id="noTomar1" class="scrollable1" align="center">
+                        <center>
+                            <!--<table contenteditable border="1" class="table table-bordered"  name="tablaValidacionDetalle" id="tablaValidacionDetalle"> -->
+                            <table contenteditable cellspacing="0" width="100%" class="table  table-fixed "  name="tablaAlmacenDetalle" id="tablaAlmacenDetalle">
+                                <thead>
+                                <tr>
+                                    <th style="width:8%">Item</th>
+                                    <th style="width:8%">Descripcion</th>
+                                    <th style="width:8%">Tipo</th>
+                                    <th style="width:8%">Producto</th>
+                                    <th style="width:8%">Presentacion</th>
+                                    <th style="width:8%">Cantidad</th>
+                                    <th style="width:8%">Justificacion</th>
+                                    <th style="width:8% ">Especif.Tecnicas</th>
+                                    <th style="width:8%">Resp.Validacion</th>
+                                    <th style="width:8%" >Estado Validacion</th>
+                                    <th style="width:8%">Especif.almacen</th>
+                                    <th style="width:8%" >Estados Almacen</th>
+
+                                    <th data-visible="false"></th>
+                                </tr>
+                                </thead>
+                                <tfoot>
+                                </tfoot>
+                                <tbody>
+                                {% for solicitudDetalle in SolicitudDetalle %}
+                                <tr>
+                                <td contenteditable="false"> {{solicitudDetalle.item}}</td>
+                                <td contenteditable="false"> {{solicitudDetalle.descripcion}}</td>
+                                <td contenteditable="false"> {{solicitudDetalle.tipo}}</td>
+                                <td contenteditable="false"> {{solicitudDetalle.producto}}</td>
+                                <td contenteditable="false"> {{solicitudDetalle.presentacion}}</td>
+                                <td contenteditable="false"> {{solicitudDetalle.cantidad}}</td>
+                                <td contenteditable="false"> {{solicitudDetalle.justificacion}}</td>
+                                <td contenteditable="false"> {{solicitudDetalle.tec}}</td>
+                                <td contenteditable="false"> {{solicitudDetalle.usuResp}}</td>
+                                <td contenteditable="false"> {{solicitudDetalle.estadosValidacion_id}}</td>
+
+                                <td>{{solicitudDetalle.especificacionesAlmacen}}</td>
+                                <td>
+                                     <select class="form-control" id="{{solicitudDetalle.item}}" name="{{solicitudDetalle.item}}" style=" width:100px; " size="1">
+                                  {% for estadosValidacion in EstadosValidacion %}
+                                    <option value="{{estadosValidacion.id}}"> {{estadosValidacion.nombre}}</option>
+                                    {% endfor %}
+                                     </select>
+                                </td>
+                                    <td  style="display:none;">{{solicitudDetalle.estadosAlmacen_id}}</td>
+                                </tr>
+                                {% endfor %}
+                                </tbody>
+
+                            </table>
+                        </center>
+                    </div>
+
+
+            <div>  <!-- fin columna -->
+
+           <div class="col-lg-3"></div>
+        <div>  <!-- Fin row -->
+
+
+<br>
+     <div class="row " style=" width:1600px;  height: 30px;">
+
+      <div class="col-lg-2 "> </div>
+         <div class="col-lg-3 ">
+
+            <input type="button" id="btnAlmSol" name="btnAlmSol" value="Enviar Notificacion" onclick="almacenTraeSolicitud()"> </input>
+
+        </div>
+
+          <div class="col-lg-4">
+            <span id="mensajes" name="mensajes"  style="color: blue" >{{Validado}} </span>
+        </div>
+         <div class="col-lg-1"> </div>
+
+
+    </div>
+        </div>
+<br>
+
+
+<!--Fin PantallaGrupos       -->
+
+{% endblock %}
+
+{% block SUBGRUPO %}
+{% endblock %}

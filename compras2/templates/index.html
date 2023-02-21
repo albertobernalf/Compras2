@@ -1,0 +1,463 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src={% static 'main.js' %} defer> </script>
+    <title>
+        {% block title %} {% endblock %}
+    </title>
+   <link rel="stylesheet" href="{% static 'js/popper.min.js' %}">
+    <link rel="stylesheet" href="{% static 'js/bootstrap.min.js' %}">
+  <link rel="stylesheet" href="{% static 'js/bootstrap.bundle.min.js' %}">
+
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Custom js -->
+
+
+
+
+
+
+
+
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="#">Brand</a>
+
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <!-- Navbar dropdown -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-mdb-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Clinicos
+          </a>
+          <!-- Dropdown menu -->
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
+            >Disabled</a
+          >
+        </li>
+      </ul>
+      <!-- Left links -->
+
+      <!-- Search form -->
+      <form class="d-flex input-group w-auto">
+        <input
+          type="search"
+          class="form-control"
+          placeholder="Type query"
+          aria-label="Search"
+        />
+        <button
+          class="btn btn-outline-primary"
+          type="button"
+          data-mdb-ripple-color="dark"
+        >
+          Search
+        </button>
+      </form>
+    </div>
+    <!-- Collapsible wrapper -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
+
+{% block content  %}
+
+
+{% endblock %}
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.43/css/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.43/css/bootstrap-datetimepicker-standalone.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.43/js/bootstrap-datetimepicker.min.js"></script>
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+
+<script>
+
+var $ = jQuery;
+
+ $(document).ready(function(){
+
+   $('#id_id_TipoExamen').on('change', function (){
+       //  alert("Entre Cambio tipo Examen");
+
+        var id_TipoExamen =  document.getElementById("id_id_TipoExamen").value;
+        var id_TipoExamen1 = id_TipoExamen;
+
+
+		var datos={id_TipoExamen:id_TipoExamen1 };
+
+		// alert("se va con");
+	//	alert (JSON.stringify(datos));
+
+  //      $.ajax({
+  //          	   type: 'POST',
+ //	               url: '/buscaExamenes/',
+  //	               data: JSON.stringify(datos) ,
+ //	      		success: function (respuesta2) {
+ //	      		             var data = JSON.parse(respuesta2);
+ //	      		             alert ("devuelve Estos Examenes");
+ //	      		             alert(data.datos);
+
+
+
+ //	      			      		},
+ //	      		error: function (request, status, error) {
+ //	      			alert(request.responseText);
+ //	      			alert (error);
+ //	      			$("#mensajes").html("Error Venta AJAX O RESPUESTA");
+ 	//      		},
+ //	      		cache : false,
+ //	      		contentType : false,
+ //	      		processData: false,
+
+ //	        });
+
+
+  });
+
+$(function () {
+ var dateNow = new Date();
+
+$('#fecha').datetimepicker({
+ format: 'YYYY-MM-DD hh:mm:ss',
+ defaultDate:dateNow
+});
+$("#fecha").data('DateTimePicker').setLocalDate(new Date(year, month, day, 00, 01));
+  });
+
+
+
+
+ $("#btnTomaFoto").click(function(){
+        alert("Entre a Rutina Foto");
+
+		var nombre = document.getElementById("nombre").value
+
+  		 $.ajax({
+	           url: '/camara',
+	           type: 'GET',
+
+	           data : {nombre:nombre},
+	  		success: function (respuesta) {
+                     var data = JSON.parse(respuesta);
+
+	                      $("#mensajes").html(data.nombre + data.mensaje);
+                    },
+	   		    error: function (request, status, error) {
+
+	   			    $("#mensajes").html(" !  Fotografia con error !");
+	   	    	}
+
+	     });
+    });
+
+
+    $("#btnmotivoSeñas").click(function(){
+        alert("Entre a Motivo Señas");
+        nombre="nada";
+
+
+
+		 $.ajax({
+	           url: '/motivoSeñas',
+	           type: 'GET',
+
+	           data : {nombre:nombre},
+	  		success: function (respuesta) {
+                     var data = JSON.parse(respuesta);
+                             alert("llegue"),
+                             alert(data.mensaje);
+
+	                       document.formHistoria["motivo"].value =data.mensaje;
+                    },
+	   		    error: function (request, status, error) {
+
+	   			    $("#mensajes").html(" !  Señas  con error !");
+	   	    	}
+
+	     });
+    });
+
+  $("#btnsubjetivoSeñas").click(function(){
+        alert("Entre a Subjetivo Señas");
+        nombre="nada";
+
+
+
+		 $.ajax({
+	           url: '/subjetivoSeñas',
+	           type: 'GET',
+
+	           data : {nombre:nombre},
+	  		success: function (respuesta) {
+                     var data = JSON.parse(respuesta);
+                             alert("llegue"),
+                             alert(data.mensaje);
+
+	                       document.formHistoria["subjetivo"].value =data.mensaje;
+                    },
+	   		    error: function (request, status, error) {
+
+	   			    $("#mensajes").html(" !  Señas  con error !");
+	   	    	}
+
+	     });
+    });
+
+
+$("#btnAdicionarExamen").click(function(){
+
+     var id_tipo_doc    =  document.formHistoria["id_id_tipo_doc"].value
+     var documento      =  document.formHistoria["id_documento"].value
+     var folio          =  document.formHistoria["id_folio"].value
+     var fecha          =  document.formHistoria["fecha"].value
+     var estado_folio   =  document.formHistoria['id_estado_folio'].value
+
+    var id_cantidad=document.getElementById("id_cantidad").value;
+	var id_TipoExamen =  document.getElementById("id_id_TipoExamen").value;
+	var comboTipoExamen = document.getElementById("id_id_TipoExamen");
+	var tipoExamenNombre = comboTipoExamen.options[comboTipoExamen.selectedIndex].text;
+
+	var id_examen =  document.getElementById("id_id_examen").value;
+	var comboExamen = document.getElementById("id_id_examen");
+	var ExamenNombre = comboExamen.options[comboExamen.selectedIndex].text;
+
+
+
+		  var tds = '<tr>';
+
+		  tds += '<td class="col-xs-2">' + tipoExamenNombre + '</td>';
+		  tds += '<td class="col-xs-6">' + ExamenNombre + '</td>';
+		  tds += '<td class="col-xs-6">' + id_cantidad + '</td>';
+          tds += '<td class="col-xs-1"><a href="#">Delete</a></td>';
+
+
+          tds += '<td  style="visibility: hidden">' + id_tipo_doc + '</td>';
+		  tds += '<td  style="visibility: hidden">' + documento + '</td>';
+		  tds += '<td  style="visibility: hidden" >' + folio + '</td>';
+		  tds += '<td  style="visibility: hidden" >' + fecha + '</td>';
+		  tds += '<td  style="visibility: hidden" >' + id_TipoExamen + '</td>';
+		  tds += '<td  style="visibility: hidden" >' + id_examen + '</td>';
+		  tds += '<td  style="visibility: hidden" >' + estado_folio + '</td>';
+
+
+
+		tds += '</tr>';
+
+		$("#Examenes").append(tds);
+
+
+        datavta = $("#formClinicos").serialize();
+     	datavta1 =  JSON.stringify(datavta);
+
+	<!--	seriali.push(datavta1); -->
+
+
+	//	envio.delete('id_tipo_doc');
+	//	envio.delete('documento');
+	//    envio.delete('folio');
+	//	envio.delete('fecha');
+	//	envio.delete('id_TipoExamen');
+	//	envio.delete('id_examen');
+	//	envio.delete('cantidad');
+	//	envio.delete('estado_folio');
+
+        envio.append('id_tipo_doc', id_tipo_doc );
+        envio.append( 'documento', documento);
+        envio.append('folio', document.getElementById("folio_oculto").value);
+        envio.append('fecha', fecha);
+        envio.append('id_TipoExamen' , id_TipoExamen);
+        envio.append('id_examen' , id_examen);
+        envio.append('cantidad' , id_cantidad);
+        envio.append('estado_folio' , estado_folio);
+
+
+             for (var valores in envio.values) {
+                     console.log(valores);
+             }
+
+
+     //   var object = {};
+       //     envio.forEach(function(value, key){
+     //                 object[key] = value;
+      //                  });
+
+     //       var jsonEnvio = JSON.stringify(object);
+
+
+        seriali1.push(envio);
+
+        addAEvent();
+
+
+   });
+
+function addAEvent(){
+
+
+
+			    $('#Examenes').unbind();
+
+
+				  $('#Examenes').on('click','tr td', function(evt){
+
+
+
+				        var target,valorSeleccionado;
+
+				        var column_num = parseInt( $(this).index() + 1 ) ;
+
+				        var row_num = parseInt( $(this).parent().index() + 1 );
+
+				  	   target = $(evt.target);
+						   valorSeleccionado = target.text();
+
+
+
+					        if(column_num == 4)
+					        	{
+
+                                seriali.splice(row_num-3, 1);
+					        	    $(this).closest('tr').remove();
+
+
+
+  	                            event.preventDefault();
+
+					        	}
+
+				    });
+		  			}
+
+
+
+$("#btnResmotivoInvidente").click(function(){
+        alert("Entre a Rutina Respuesta Motivo Paciente");
+
+
+  		 $.ajax({
+	           url: '/resMotivoInvidente',
+	           type: 'GET',
+
+	           data : {},
+	  		success: function (respuesta) {
+                     var data = JSON.parse(respuesta);
+
+
+	                    document.getElementById("id_motivo").value = data.Respuesta;
+                    },
+	   		    error: function (request, status, error) {
+
+	   			    $("#mensajes").html(" !  Reproduccion  con error !");
+	   	    	}
+
+	     });
+    });
+
+
+
+$("#btnmotivoInvidente").click(function(){
+        alert("Entre a Rutina Reproducir Audio Motivo");
+
+		var nombre = " Cual es el motivo de consulta "
+
+  		 $.ajax({
+	           url: '/motivoInvidente',
+	           type: 'GET',
+
+	           data : {nombre:nombre},
+	  		success: function (respuesta) {
+                     var data = JSON.parse(respuesta);
+
+	                   //   $("#mensajes").html(data.nombre + data.mensaje);
+                    },
+	   		    error: function (request, status, error) {
+
+	   			    $("#mensajes").html(" !  Reproduccion  con error !");
+	   	    	}
+
+	     });
+    });
+
+
+
+    $("#btnReproducir").click(function(){
+        alert("Entre a Rutina Reproducir Audio");
+
+		var nombre = document.getElementById("nombre").value
+
+  		 $.ajax({
+	           url: '/reproduceAudio',
+	           type: 'GET',
+
+	           data : {nombre:nombre},
+	  		success: function (respuesta) {
+                     var data = JSON.parse(respuesta);
+
+	                      $("#mensajes").html(data.nombre + data.mensaje);
+                    },
+	   		    error: function (request, status, error) {
+
+	   			    $("#mensajes").html(" !  Reproduccion  con error !");
+	   	    	}
+
+	     });
+    });
+
+ });
+</script>
+</body>
+
+</html>
+
